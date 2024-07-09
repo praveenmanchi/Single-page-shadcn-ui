@@ -165,7 +165,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "public//project-1.png",
+      image: "/project-1.png",
       video: "https://cdn.magicui.design/bento-grid.mp4",
     },
     // {

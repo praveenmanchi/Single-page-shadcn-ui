@@ -81,13 +81,11 @@ export default function Page() {
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
-            {DATA.skills
-              .filter((skill): skill is string => typeof skill === 'string')
-              .map((skill, id) => (
-                <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                  <Badge key={skill}>{skill}</Badge>
-                </BlurFade>
-              ))}
+            {DATA.skills.map((skill, id) => (
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <Badge key={skill}>{skill}</Badge>
+              </BlurFade>
+            ))}
           </div>
         </div>
       </section>
@@ -117,15 +115,17 @@ export default function Page() {
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
-               <ProjectCard
-  href={project.href}
-  key={project.title}
-  title={project.title}
-  description={project.description}
-  dates={project.dates}
-  tags={project.technologies?.filter((tech): tech is string => typeof tech === 'string') ?? [] as string[]}  video={project.video}
-  links={project.links}
-/>
+                <ProjectCard
+                  href={project.href}
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  dates={project.dates}
+                  tags={project.technologies ? project.technologies.filter(tag => tag !== undefined) : []}
+                  image={project.image}
+                  video={project.video}
+                  links={project.links}
+                />
               </BlurFade>
             ))}
           </div>
@@ -205,21 +205,18 @@ export default function Page() {
                 Contact
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in touch
+                Get in Touch
               </h2>
-              <p className="text-muted-foreground lg:text-base/relaxed xl:text-xl/relaxed">
-                Whether you have a question or just want to say hi, feel free to
-                drop me a message. I&apos;ll try my best to get back to you!
-              </p>
-              <BlurFade delay={BLUR_FADE_DELAY * 17}>
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Want to chat? Just shoot me a dm{" "}
                 <Link
-                  aria-label="Send an email"
-                  href="mailto:hello@kendallstrautman.com"
-                  className="inline-block font-semibold"
+                  href={DATA.contact.social.LinkedIn.url}
+                  className="text-blue-500 hover:underline"
                 >
-                  {DATA.email}
-                </Link>
-              </BlurFade>
+                  with a direct question on Linkedin
+                </Link>{" "}
+                and I&apos;ll respond as soon as possible.
+              </p>
             </div>
           </BlurFade>
         </div>
