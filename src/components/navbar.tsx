@@ -39,7 +39,7 @@ export default function Navbar() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="/Resume.pdf"
+                href="/Priyanka_UI & Full stack Developer.pdf"
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "icon" }),
                   "size-12"
