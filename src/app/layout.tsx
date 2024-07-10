@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: 'https://ycsfwdainpwgmgsjqppv.supabase.co/storage/v1/object/public/OG-images/Priyankaog.png',
+      },
+    ],
   },
   robots: {
     index: true,

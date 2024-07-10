@@ -6,7 +6,7 @@ export const DATA = {
   url: "https://priyankapulugu.site/", 
   locationLink: "https://maps.app.goo.gl/xqmoVTxvRCgqZQyq5",
   description:
-    "UI/Front-end Developer with 3+ years of experience in React development, specializing in responsive user interfaces and performance optimization.",
+    "As a passionate UI/Full Stack Developer, Crafting high-performance websites and captivating content for maximum impact and I specialize in creating dynamic, responsive, and high-performance web applications that captivate users and drive results.",
   summary:
     "I'm a UI Developer with 3+ years experienced React Developer with hands-on experience in identifying web-based user interactions along with designing & implementing highly-responsive user interface components by deploying React concepts. Proficient in translating designs & wireframes into high-quality code, and writing application interface code via Javascript and ReactJS workflows. Adept at monitoring & maintaining frontend performance and troubleshooting & debugging the same to bolster overall performance.",
   avatarUrl: "/Me.jpg", 
@@ -70,6 +70,7 @@ export const DATA = {
       end: "Present",
       description:
         "Developed dynamic web-based user interactions using React concepts. Translated designs into high-quality code. Debugged and optimized application performance. Implemented front-end architectures and developed user-facing features. Monitored and improved front-end performance.",
+      
     },
   ],
   education: [
